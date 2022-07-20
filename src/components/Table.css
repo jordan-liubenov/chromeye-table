@@ -1,0 +1,14 @@
+table {
+  font-size: 70%;
+  font-weight: 100;
+}
+
+th {
+  background-color: #545d6d;
+}
+
+table, td {
+  background-color: #40444a;
+  border: 1px solid;
+  border-radius: 5px;
+}
