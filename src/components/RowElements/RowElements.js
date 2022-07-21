@@ -1,30 +1,25 @@
-import { useEffect } from "react";
+import RenderUsers from "../RenderUsers/RenderUsers";
 
+//Initial user render (All users, non-filtered)
 
 const RowElements = (props) => {
-  //props.users - array of objects
-  return (
-    <>
-      {props.users.map((user) => (
-        <tr key={user.id}>
-          <td>
-            <img
-              width={32}
-              height={32}
-              src={`http://apis.chromeye.com:9191` + user.avatar.url}
-            ></img>
-          </td>
-          <td>{user.id}</td>
-          <td>{user.firstName}</td>
-          <td>{user.lastName}</td>
-          <td>{user.email}</td>
-          <td>{user.company.name}</td>
-          <td>{user.company.department}</td>
-          <td>{user.company.startDate}</td>
-        </tr>
-      ))}
-    </>
-  );
+  let page = props.page;
+
+  let pageSize = props.pagingSize;
+
+  let users = props.users;
+
+  let render;
+  if (users.length > 0) {
+    if (page == 1) {
+      users = users.slice(0, pageSize);
+    } else {
+      users = users.slice(Number(props.index), Number(props.endIndex));
+    }
+    render = <RenderUsers userArr={users} />;
+  }
+
+  return <>{render}</>;
 };
 
 export default RowElements;

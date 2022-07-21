@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "../SearchBar/SearchBar.css";
 
 const SearchBar = (props) => {
@@ -6,7 +5,7 @@ const SearchBar = (props) => {
     <div className="searchDiv">
       <input
         type="text"
-        placeholder="Search by First or Last name"
+        placeholder="Search"
         value={props.searchValue}
         onChange={props.handleSearch}
       ></input>

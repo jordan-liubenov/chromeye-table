@@ -4,11 +4,19 @@ table {
 }
 
 th {
+  padding: 5px;
   background-color: #545d6d;
+}
+
+td {
+  padding: 5px;
 }
 
 table, td {
   background-color: #40444a;
   border: 1px solid;
+}
+
+table {
   border-radius: 5px;
 }

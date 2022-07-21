@@ -1,0 +1,12 @@
+button {
+  padding: 10px;
+  font-family: "Jetbrains Mono";
+  border-radius: 10px;
+  font-size: 50%;
+  margin: 0 auto;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(101, 172, 235);
+}
